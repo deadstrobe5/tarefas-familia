@@ -60,6 +60,8 @@ def generate_html_content(final_schedule, task_codes, task_symbols, task_descrip
                          task_short_descriptions, task_css_colors, category_title, 
                          start_date, people_symbols):
     """Generate the HTML content for the schedule"""
+    # Get uppercase title
+    upper_title = category_title.upper()
     
     html_content = f"""<!DOCTYPE html>
 <html>
@@ -207,7 +209,7 @@ def generate_html_content(final_schedule, task_codes, task_symbols, task_descrip
     </style>
 </head>
 <body>
-    <h1>🔀 {category_title.upper()} 🔀</h1>
+    <h1>🔀 """ + upper_title + """ 🔀</h1>
     <table class=\"legend\">
         <tr>
             <th>Tarefa</th>
