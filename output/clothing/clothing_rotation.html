@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>👕 Roupa</title>
+    <style>
+        body {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #222;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            padding: 6px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ecf0f1;
+            font-size: 2em;
+        }
+        .legend {
+            margin: 10px 0;
+            border-collapse: collapse;
+            width: 100%;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px #0001;
+        }
+        .legend th {
+            background-color: #ffe066;
+            text-align: left;
+            padding: 8px 6px;
+            font-size: 1em;
+        }
+        .legend td {
+            padding: 6px;
+            border: 1px solid #eee;
+            font-size: 0.9em;
+        }
+        .task-emoji {
+            font-size: 1.2em;
+            margin-right: 5px;
+        }
+        .task-title {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .task-lavar { 
+            color: #0a7d36; 
+            font-weight: bold; 
+        }
+        .task-arrumar { 
+            color: #0e5394; 
+            font-weight: bold; 
+        }
+        .schedule {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px #0001;
+            table-layout: fixed;
+        }
+        .schedule th {
+            background-color: #1a5fb4;
+            color: #fff;
+            padding: 14px 8px;
+            text-align: center;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+        }
+        .schedule .task-header {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.15);
+            font-weight: bold;
+        }
+        .schedule .day-col {
+            background-color: #1a5fb4;
+            color: #fff;
+            font-weight: bold;
+            padding: 6px 4px;
+            text-align: center;
+            width: 120px;
+        }
+        .schedule td {
+            border: 1px solid #eee;
+            padding: 8px 4px;
+            text-align: center;
+            font-size: 0.9em;
+            height: 40px;
+            vertical-align: middle;
+        }
+        .schedule tr:nth-child(even) {
+            background-color: #f4f8fb;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #7f8c8d;
+            font-size: 1em;
+        }
+        @media print {
+            body {
+                padding: 0;
+                margin: 0;
+                background: #fff;
+                font-size: 95%;
+            }
+            h1 {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                page-break-after: avoid;
+            }
+            .schedule {
+                page-break-inside: auto;
+                margin: 10px 0;
+            }
+            .schedule tr {
+                page-break-inside: avoid;
+                page-break-after: auto;
+            }
+            .page-break {
+                page-break-after: always;
+            }
+            .legend {
+                page-break-inside: avoid;
+            }
+            tr {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>🔀 👕 ROUPA 🔀</h1>
+    <table class="legend">
+        <tr>
+            <th>Tarefa</th>
+            <th>Descrição</th>
+        </tr>
+
+        <tr>
+            <td><span class="task-lavar task-title"><span class="task-emoji">👕</span>Lavar</span></td>
+            <td>Lavar a roupa durante toda a semana <strong>(Responsabilidade semanal)</strong></td>
+        </tr>
+        <tr>
+            <td><span class="task-estender task-title"><span class="task-emoji">🧺</span>Estender</span></td>
+            <td>Estender a roupa durante toda a semana <strong>(Responsabilidade semanal)</strong></td>
+        </tr>
+        <tr>
+            <td><span class="task-dobrar task-title"><span class="task-emoji">🧷</span>Dobrar</span></td>
+            <td>Dobrar e guardar a roupa durante toda a semana <strong>(Responsabilidade semanal)</strong></td>
+        </tr>
+    </table>
+    <table class="schedule">
+        <tr>
+            <th>Semana</th>
+            <th><span class="task-header">👕 Lavar</span></th>
+            <th><span class="task-header">🧺 Estender</span></th>
+            <th><span class="task-header">🧷 Dobrar</span></th>
+        </tr>
+        <tr>
+            <td class="day-col">20-26 Mai</td>
+            <td>A 👦 ⟷ M 👩</td>
+            <td>A 👦 ⟷ P 👱‍♀️</td>
+            <td>A 👦 ⟷ M 👩</td>
+        </tr>
+        <tr>
+            <td class="day-col">27 Mai - 02 Jun</td>
+            <td>A 👦 ⟷ P 👱‍♀️</td>
+            <td>P 👱‍♀️ ⟷ H 🧔</td>
+            <td>C 👧 ⟷ P 👱‍♀️</td>
+        </tr>
+        <tr>
+            <td class="day-col">03-09 Jun</td>
+            <td>A 👦 ⟷ D 🧓</td>
+            <td>A 👦 ⟷ H 🧔</td>
+            <td>A 👦 ⟷ H 🧔</td>
+        </tr>
+        <tr>
+            <td class="day-col">10-16 Jun</td>
+            <td>C 👧 ⟷ M 👩</td>
+            <td>M 👩 ⟷ D 🧓</td>
+            <td>P 👱‍♀️ ⟷ D 🧓</td>
+        </tr>
+        <tr>
+            <td class="day-col">17-23 Jun</td>
+            <td>M 👩 ⟷ P 👱‍♀️</td>
+            <td>A 👦 ⟷ M 👩</td>
+            <td>M 👩 ⟷ H 🧔</td>
+        </tr>
+        <tr>
+            <td class="day-col">24-30 Jun</td>
+            <td>D 🧓 ⟷ H 🧔</td>
+            <td>C 👧 ⟷ H 🧔</td>
+            <td>P 👱‍♀️ ⟷ D 🧓</td>
+        </tr>
+        <tr>
+            <td class="day-col">01-07 Jul</td>
+            <td>D 🧓 ⟷ H 🧔</td>
+            <td>P 👱‍♀️ ⟷ D 🧓</td>
+            <td>M 👩 ⟷ H 🧔</td>
+        </tr>
+        <tr>
+            <td class="day-col">08-14 Jul</td>
+            <td>D 🧓 ⟷ H 🧔</td>
+            <td>C 👧 ⟷ D 🧓</td>
+            <td>A 👦 ⟷ D 🧓</td>
+        </tr>
+        <tr>
+            <td class="day-col">15-21 Jul</td>
+            <td>A 👦 ⟷ C 👧</td>
+            <td>M 👩 ⟷ P 👱‍♀️</td>
+            <td>A 👦 ⟷ D 🧓</td>
+        </tr>
+        <tr class="page-break">
+            <td class="day-col">22-28 Jul</td>
+            <td>A 👦 ⟷ C 👧</td>
+            <td>C 👧 ⟷ D 🧓</td>
+            <td>A 👦 ⟷ C 👧</td>
+        </tr>
+        <tr>
+            <td class="day-col">29 Jul - 04 Ago</td>
+            <td>C 👧 ⟷ M 👩</td>
+            <td>M 👩 ⟷ D 🧓</td>
+            <td>M 👩 ⟷ D 🧓</td>
+        </tr>
+        <tr>
+            <td class="day-col">05-11 Ago</td>
+            <td>P 👱‍♀️ ⟷ H 🧔</td>
+            <td>C 👧 ⟷ M 👩</td>
+            <td>C 👧 ⟷ H 🧔</td>
+        </tr>
+        <tr>
+            <td class="day-col">12-18 Ago</td>
+            <td>C 👧 ⟷ D 🧓</td>
+            <td>A 👦 ⟷ H 🧔</td>
+            <td>M 👩 ⟷ H 🧔</td>
+        </tr>
+        <tr>
+            <td class="day-col">19-25 Ago</td>
+            <td>P 👱‍♀️ ⟷ H 🧔</td>
+            <td>C 👧 ⟷ H 🧔</td>
+            <td>C 👧 ⟷ P 👱‍♀️</td>
+        </tr>
+        <tr>
+            <td class="day-col">26 Ago - 01 Set</td>
+            <td>M 👩 ⟷ P 👱‍♀️</td>
+            <td>A 👦 ⟷ P 👱‍♀️</td>
+            <td>C 👧 ⟷ P 👱‍♀️</td>
+        </tr>
+    </table>
+    
+    <div class="footer">
+        <p>Feito por Afonso ❤️</p>
+        <p><em>Cada linha representa uma semana completa (segunda a domingo).</em></p>
+    </div>
+</body>
+</html>
