@@ -69,7 +69,7 @@ def generate_html_content(final_schedule, task_codes, task_symbols, task_descrip
     <meta charset=\"UTF-8\">
     <title>{category_title}</title>
     <style>
-        body {
+        body {{
             font-family: 'Helvetica', 'Arial', sans-serif;
             line-height: 1.6;
             color: #222;
@@ -77,16 +77,16 @@ def generate_html_content(final_schedule, task_codes, task_symbols, task_descrip
             margin: 0 auto;
             padding: 20px;
             background: #f8f9fa;
-        }
-        h1 {
+        }}
+        h1 {{
             text-align: center;
             color: #2c3e50;
             padding: 6px;
             margin-bottom: 15px;
             border-bottom: 2px solid #ecf0f1;
             font-size: 2em;
-        }
-        .legend {
+        }}
+        .legend {{
             margin: 10px 0;
             border-collapse: collapse;
             width: 100%;
@@ -94,26 +94,26 @@ def generate_html_content(final_schedule, task_codes, task_symbols, task_descrip
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 2px 8px #0001;
-        }
-        .legend th {
+        }}
+        .legend th {{
             background-color: #ffe066;
             text-align: left;
             padding: 8px 6px;
             font-size: 1em;
-        }
-        .legend td {
+        }}
+        .legend td {{
             padding: 6px;
             border: 1px solid #eee;
             font-size: 0.9em;
-        }
-        .task-emoji {
+        }}
+        .task-emoji {{
             font-size: 1.2em;
             margin-right: 5px;
-        }
-        .task-title {
+        }}
+        .task-title {{
             font-weight: bold;
             font-size: 1.1em;
-        }
+        }}
 """
     # Generate specific styles for each task's CSS class
     for code in task_codes:
